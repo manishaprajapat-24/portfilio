@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure the CSS file name is correct -->
+    <link rel="stylesheet" href="utility.css"> <!-- Ensure this file exists -->
+    <style>
+        /* Ensure the CSS variables are defined in your style.css or utility.css */
+        :root {
+            --primary-color: #fff;
+            --primary-shade: #e2d8d8;
+            --secondary-color: #020202;
+            --secondary-shade: #9fa5a5;
+            --red-color: #f82222;
+            --red-shade: #dc0b0b;
+            --accent-color: #f7e929;
+        }
+
+        .contact-header {
+            background: linear-gradient(to right, #646363, #383838, #baeee8);
+            padding: 20px;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid var(--secondary-shade);
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent-color);
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--red-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--red-shade);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--red-color);
+        }
+        button {
+            border-radius: 10%;
+            background-color: #f7e929;
+            width: 120px;
+            height: 40px;
+        }
+        button:hover {
+            background-color: #badcf2;
+            transform: scale(1.05); 
+        }
+         
+    </style>
+</head>
+<body>
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+    </header>
+    <div class="contact-container">
+        <form class="contact-form" action="send_email.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <a href="index.html" class="back-link"><button>Back to Main</button>
+        </a>
+    </div>
+</body>
+</html>
